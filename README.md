@@ -3,3 +3,4 @@
 TODO:
 - UML
 - The game
+- Learn Git
