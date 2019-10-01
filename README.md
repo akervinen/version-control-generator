@@ -1,6 +1,4 @@
-# version-control-generator
-
-Kalashnikov card game
+# Kalashnikov card game
 
 TODO:
 - UML
