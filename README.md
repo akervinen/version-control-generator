@@ -8,7 +8,7 @@ TODO:
 Make changes to the UML-diagram:
 https://api.genmymodel.com/login
 username: jeejee
-password: joujou
+
 
 +----------------------------------------------------+
 | RULES of Kalashnikov the card game (made by Boris) |
