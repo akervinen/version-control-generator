@@ -1,21 +1,19 @@
 public class Card{
-    private int suit;
+    private Suit suit;
     private int value;
 
-    public Card(int value, int suit){
+    public Card(int value, Suit suit){
         setSuit(suit);
         setValue(value);
     }
 
 
-    public int getSuit() {
+    public Suit getSuit() {
         return this.suit;
     }
 
-    public void setSuit(int suit) {
-        if (suit < 0 || suit>3){
-            throw new IllegalArgumentException("Card suit must be 0, 1, 2, or 3");
-        }
+    public void setSuit(Suit suit) {
+
         this.suit = suit;
     }
 
@@ -27,6 +25,13 @@ public class Card{
         if (value < 1 || value>13){
             throw new IllegalArgumentException("Card value must be between 1-13");
         }
+        this.value = value;
+    }
+
+    @Override
+    public String toString(){
+        String card = suit+" "+value;
+        return card;
     }
 
     
