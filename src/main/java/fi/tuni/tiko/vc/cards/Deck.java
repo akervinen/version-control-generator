@@ -54,4 +54,15 @@ public class Deck {
         cards = getFullDeck();
         shuffle();
     }
+
+    public String toString() {
+        String str = "";
+        for (int i = 0; i < cards.size(); i++) {
+            str += cards.get(i).toString();
+            if (i != cards.size() - 1) {
+                str += ", ";
+            }
+        }
+        return str;
+    }
 }
