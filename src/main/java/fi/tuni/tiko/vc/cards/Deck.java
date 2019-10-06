@@ -11,7 +11,7 @@ public class Deck {
 
     public Deck() {
         initFullDeck();
-        cards = getFullDeck();
+        resetDeck();
     }
 
     private void initFullDeck() {
