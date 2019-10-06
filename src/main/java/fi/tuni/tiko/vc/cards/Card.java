@@ -22,4 +22,8 @@ public class Card {
     public void setSuit(int suit) {
         this.suit = suit;
     }
+
+    public String toString() {
+        return value + "" + suit;
+    }
 }
