@@ -37,6 +37,6 @@ public class Card {
     }
 
     public String toString() {
-        return value + "" + suit;
+        return String.format("%2d %d", value, suit);
     }
 }
