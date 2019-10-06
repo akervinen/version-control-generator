@@ -29,7 +29,11 @@ public class Card {
     }
 
     public void setSuit(int suit) {
-        this.suit = suit;
+        if (suit < 4 && suit > -1) {
+            this.suit = suit;
+        } else {
+            this.suit = -1;
+        }
     }
 
     public String toString() {
