@@ -29,4 +29,10 @@ public class Deck {
                 .stream()
                 .collect(Collectors.toCollection(LinkedList::new));
     }
+
+    public Card pickTopCard() {
+        Card topCard = cards.pollFirst();
+        cards.remove(topCard);
+        return topCard;
+    }
 }
