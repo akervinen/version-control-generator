@@ -1,5 +1,6 @@
 package fi.tuni.tiko.vc.cards;
 
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -43,5 +44,9 @@ public class Deck {
         Card card = cards.get(i);
         cards.remove(card);
         return card;
+    }
+
+    public void shuffle() {
+        Collections.shuffle(cards);
     }
 }
