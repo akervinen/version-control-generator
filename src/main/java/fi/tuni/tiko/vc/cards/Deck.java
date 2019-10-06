@@ -38,4 +38,10 @@ public class Deck {
     public List<Card> getCards() {
         return cards;
     }
+
+    public Card pickCard(int i) {
+        Card card = cards.get(i);
+        cards.remove(card);
+        return card;
+    }
 }
