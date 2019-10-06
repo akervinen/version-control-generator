@@ -49,4 +49,9 @@ public class Deck {
     public void shuffle() {
         Collections.shuffle(cards);
     }
+
+    public void resetDeck() {
+        cards = getFullDeck();
+        shuffle();
+    }
 }
