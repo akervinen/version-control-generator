@@ -65,4 +65,18 @@ public class Deck {
         }
         return str;
     }
+
+    public boolean equals(Deck d) {
+        List<Card> otherCards = d.getCards();
+        if (cards.size() != otherCards.size()) {
+            return false;
+        } else {
+            for (Card card : otherCards) {
+                if (!cards.contains(card)) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 }
