@@ -17,7 +17,11 @@ public class Card {
     }
 
     public void setValue(int value) {
-        this.value = value;
+        if (value < 15 && value > 1) {
+            this.value = value;
+        } else {
+            this.value = -1;
+        }
     }
 
     public int getSuit() {
