@@ -7,6 +7,11 @@ public class Card {
     private int value;
     private int suit;
 
+    public Card(int value, int suit) {
+        setValue(value);
+        setSuit(suit);
+    }
+
     public int getValue() {
         return value;
     }
