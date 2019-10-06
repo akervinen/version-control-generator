@@ -1,6 +1,5 @@
 package fi.tuni.tiko.vc.cards;
 
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -34,5 +33,9 @@ public class Deck {
         Card topCard = cards.pollFirst();
         cards.remove(topCard);
         return topCard;
+    }
+
+    public List<Card> getCards() {
+        return cards;
     }
 }
