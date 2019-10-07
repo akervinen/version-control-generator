@@ -11,6 +11,14 @@ public class DeckTest {
     }
 
     @Test
+    public void testEquals() {
+        var deck1 = new Deck(false);
+        var deck2 = new Deck(false);
+
+        Assert.assertEquals(deck1, deck2);
+    }
+
+    @Test
     public void testResetDeck() {
         String originalDeck = deck.toString();
         deck.resetDeck();
