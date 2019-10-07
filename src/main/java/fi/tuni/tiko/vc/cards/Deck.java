@@ -50,6 +50,10 @@ public class Deck {
         return cards.get(i);
     }
 
+    public int getCardsLeft() {
+        return cards.size();
+    }
+
     public void shuffle() {
         Collections.shuffle(cards);
     }
