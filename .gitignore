@@ -3,5 +3,9 @@
 .project
 .settings/
 
+# IntelliJ IDEA project files
+.idea/
+*.iml
+
 # Built files
 target/
