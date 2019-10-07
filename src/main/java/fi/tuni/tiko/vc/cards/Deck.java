@@ -3,7 +3,7 @@ package fi.tuni.tiko.vc.cards;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Objects;
 
 public class Deck {
     private LinkedList<Card> cards;
@@ -78,18 +78,12 @@ public class Deck {
         return str;
     }
 
-    public boolean equals(Deck d) {
-        List<Card> otherCards = d.getCards();
-        if (cards.size() != otherCards.size()) {
-            return false;
-        } else {
-            for (int i = 0; i < cards.size(); i++) {
-                if (!d.getCard(i).equals(cards.get(i))) {
-                    return false;
-                }
-            }
-        }
-        return true;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Deck deck = (Deck) o;
+        return Objects.equals(cards, deck.cards);
     }
 
     public boolean equalsIgnoreOrder(Deck d) {
