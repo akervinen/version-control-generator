@@ -75,8 +75,8 @@ public class Deck {
         if (cards.size() != otherCards.size()) {
             return false;
         } else {
-            for (Card card : otherCards) {
-                if (!cards.contains(card)) {
+            for (int i = 0; i < cards.size(); i++) {
+                if (!d.getCard(i).equals(cards.get(i))) {
                     return false;
                 }
             }
