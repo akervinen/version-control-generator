@@ -1,0 +1,7 @@
+# VSCode Java extension files?
+.classpath
+.project
+.settings/
+
+# Built files
+target/
