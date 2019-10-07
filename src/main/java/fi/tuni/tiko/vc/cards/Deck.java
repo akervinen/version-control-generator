@@ -31,9 +31,7 @@ public class Deck {
     }
 
     private LinkedList<Card> getFullDeck() {
-        return fullDeck
-                .stream()
-                .collect(Collectors.toCollection(LinkedList::new));
+        return new LinkedList<>(fullDeck);
     }
 
     public Card pickTopCard() {
