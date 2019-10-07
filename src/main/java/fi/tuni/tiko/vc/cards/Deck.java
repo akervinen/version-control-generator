@@ -16,11 +16,14 @@ public class Deck {
 
     private void initFullDeck() {
         fullDeck = new LinkedList<>();
+
+        var suits = Suit.values();
         for (int value = 2; value < 15; value++) {
             for (int suit = 0; suit < 4; suit++) {
-                fullDeck.add(new Card(value, suit));
+                fullDeck.add(new Card(value, suits[suit]));
             }
         }
+
         cards = getFullDeck();
     }
 

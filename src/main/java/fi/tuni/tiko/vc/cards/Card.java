@@ -5,9 +5,9 @@ package fi.tuni.tiko.vc.cards;
  */
 public class Card {
     private int value;
-    private int suit;
+    private Suit suit;
 
-    public Card(int value, int suit) {
+    public Card(int value, Suit suit) {
         setValue(value);
         setSuit(suit);
     }
@@ -20,23 +20,20 @@ public class Card {
         if (value < 15 && value > 1) {
             this.value = value;
         } else {
-            this.value = -1;
+            throw new IllegalArgumentException("Card value must be between 2-14");
         }
     }
 
-    public int getSuit() {
+    public Suit getSuit() {
         return suit;
     }
 
-    public void setSuit(int suit) {
-        if (suit < 4 && suit > -1) {
-            this.suit = suit;
-        } else {
-            this.suit = -1;
-        }
+    public void setSuit(Suit suit) {
+        this.suit = suit;
     }
 
+    @Override
     public String toString() {
-        return String.format("%2d %d", value, suit);
+        return String.format("%2d %s", value, suit);
     }
 }
