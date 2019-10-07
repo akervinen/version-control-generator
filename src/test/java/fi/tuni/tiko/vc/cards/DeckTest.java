@@ -19,4 +19,25 @@ public class DeckTest {
         // Tests if Deck's output changes when the deck is reset.
         Assert.assertFalse(originalDeck.equals(shuffledDeck));
     }
+
+    @Test
+    public void testPickTopCard() {
+        Card firstCard = deck.getCards().get(0);
+        Card topCard = deck.pickTopCard();
+
+        // Test if returned card is instance of Card.
+        Assert.assertTrue(
+                "Picked card should be instance of Card.",
+                topCard instanceof Card);
+
+        // Test if deck's first card equals the picked top card.
+        Assert.assertEquals(
+                "Picked top card should equal the original first card.",
+                firstCard, topCard);
+
+        // Test if the picked top card was removed from the deck.
+        Assert.assertFalse(
+                "Current first card should not equal the picked card.",
+                topCard.equals(deck.getCards().get(0)));
+    }
 }
