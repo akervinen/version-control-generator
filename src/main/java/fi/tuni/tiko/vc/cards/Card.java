@@ -1,5 +1,7 @@
 package fi.tuni.tiko.vc.cards;
 
+import java.util.Objects;
+
 /**
  * Class representing a single card in the game.
  */
@@ -35,5 +37,19 @@ public class Card {
     @Override
     public String toString() {
         return String.format("%2d %s", value, suit);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Card card = (Card) o;
+        return value == card.value &&
+                suit == card.suit;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(value, suit);
     }
 }
