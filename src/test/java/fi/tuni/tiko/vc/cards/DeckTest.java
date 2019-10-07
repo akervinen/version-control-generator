@@ -16,7 +16,7 @@ public class DeckTest {
         deck.resetDeck();
         String shuffledDeck = deck.toString();
 
-        // Tests if Deck's output changes when the deck is reset.
+        // Test if Deck's output changes when the deck is reset.
         Assert.assertFalse(originalDeck.equals(shuffledDeck));
     }
 
@@ -39,5 +39,10 @@ public class DeckTest {
         Assert.assertFalse(
                 "Current first card should not equal the picked card.",
                 topCard.equals(deck.getCards().get(0)));
+
+        deck.resetDeck();
+        deck.pickTopCard();
+        // Test if the picked top card was removed from the deck.
+        Assert.assertTrue(deck.getCards().size() == 51);
     }
 }
