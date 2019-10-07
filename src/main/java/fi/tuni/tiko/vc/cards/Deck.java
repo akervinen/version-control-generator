@@ -10,11 +10,10 @@ public class Deck {
     private LinkedList<Card> fullDeck;
 
     public Deck() {
-        initFullDeck();
-        resetDeck();
+        this(true);
     }
 
-    private void initFullDeck() {
+    public Deck(boolean shuffled) {
         fullDeck = new LinkedList<>();
 
         var suits = Suit.values();
@@ -25,6 +24,10 @@ public class Deck {
         }
 
         cards = getFullDeck();
+
+        if (shuffled) {
+            shuffle();
+        }
     }
 
     private LinkedList<Card> getFullDeck() {
